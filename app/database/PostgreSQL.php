@@ -1,26 +1,18 @@
 <?php
 /**
- * Created by rodger on 3/10/2019 2:09 AM
+ * Created by rodger on 3/17/2019 9:20 PM
  */
-include("../interface/Database.php");
 
-class MySQL implements Database{
+class PostgreSQL implements Database {
     private $conn = null;
 
     // Db info
     private $host = 'localhost';
     private $user = 'root';
-    private $pass = '';
-    private $dbname = 'dp_bookingSystem';
+    private $pass = '1234567890';
+    private $dbname = 'bookingSystem';
 
     public function __construct() { }
-
-    /**
-     * @return null
-     */
-    public function getConn() {
-        return $this->conn;
-    }
 
     function getHost() {
         // TODO: Implement getServername() method.
@@ -63,20 +55,8 @@ class MySQL implements Database{
     }
 
     function connect() {
-        // Check if the connection is already established
-        try{
-
-            $this->conn = new PDO(
-                "mysql:host={$this->host};dbname={$this->dbname}",
-                $this->user,
-                $this->pass,
-                array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'")
-            );
-
-            // Error handling
-        }catch(PDOException $e){
-            die("Failed to connect to DB MySQL: ". $e->getMessage());
-        }
+        // TODO: Implement connect() method.
+        echo "Connected with PostgreSQL\n";
     }
 
     function close() {

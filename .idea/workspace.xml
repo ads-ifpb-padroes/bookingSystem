@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d3b299c-07f7-47ab-a531-e085c6171564" name="Default Changelist" comment="" />
+    <list default="true" id="0d3b299c-07f7-47ab-a531-e085c6171564" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/UsuarioDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/DbFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/PostgreSQL.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entities/Acento.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entities/Reserva.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/interface/DaoInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/interface/Database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/UsuarioControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UsuarioControl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/DbConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/DbConnection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/MySQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/MySQL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Atracao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Atracao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Relatorio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Relatorio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Usuario.php" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,38 +29,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/api/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/database/DbConnection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/MySQL.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            <state relative-caret-position="144">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding>
+                <element signature="e#1036#1632#0#PHP" />
+                <element signature="e#1668#2226#0#PHP" />
+                <element signature="e#3398#3641#0#PHP" />
+                <element signature="e#3647#4119#0#PHP" />
+                <element signature="e#4125#4637#0#PHP" />
+                <element signature="e#4643#5090#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/entities/Usuario.php">
+        <entry file="file://$PROJECT_DIR$/app/controller/UsuarioControl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="365">
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/dao/UsuarioDao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+              <folding>
+                <element signature="e#6#55#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/interface/DaoInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -63,23 +92,15 @@
       <find>button</find>
       <find>modal</find>
       <find>2d2d2d</find>
+      <find>config</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/action/AtracaoAction.php" />
-        <option value="$PROJECT_DIR$/app/action/AttractionAction.php" />
-        <option value="$PROJECT_DIR$/app/entities/Attraction.php" />
-        <option value="$PROJECT_DIR$/app/entities/Event.php" />
-        <option value="$PROJECT_DIR$/index2.html" />
-        <option value="$PROJECT_DIR$/app/entities/User.php" />
-        <option value="$PROJECT_DIR$/app/controller/EventControl.php" />
-        <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/app/helper/DatabaseHelper.php" />
-        <option value="$PROJECT_DIR$/app/action/UserAction.php" />
-        <option value="$PROJECT_DIR$/app/controller/UserControl.php" />
-        <option value="$PROJECT_DIR$/app/helper/config.inc.php" />
         <option value="$PROJECT_DIR$/app/helper/DatabaseConnection.php" />
         <option value="$PROJECT_DIR$/app/helper/DbConnection.php" />
         <option value="$PROJECT_DIR$/app/helper/MySQL.php" />
@@ -97,12 +118,10 @@
         <option value="$PROJECT_DIR$/app/util/GenerateReport.php" />
         <option value="$PROJECT_DIR$/app/util/PDF.php" />
         <option value="$PROJECT_DIR$/app/entities/Report.php" />
-        <option value="$PROJECT_DIR$/app/entities/Atracao.php" />
         <option value="$PROJECT_DIR$/app/util/CVS.php" />
         <option value="$PROJECT_DIR$/app/interface/AposGerarRelatorioInt.php" />
         <option value="$PROJECT_DIR$/app/interface/RelatorioInterface.php" />
         <option value="$PROJECT_DIR$/app/util/RelatorioEmCVS.php" />
-        <option value="$PROJECT_DIR$/app/entities/Relatorio.php" />
         <option value="$PROJECT_DIR$/app/util/GerarRelatorio.php" />
         <option value="$PROJECT_DIR$/app/util/EnviadorDeSMS.php" />
         <option value="$PROJECT_DIR$/app/interface/AcoesAoGerarRelatorio.php" />
@@ -114,10 +133,24 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/login.css" />
+        <option value="$PROJECT_DIR$/app/util/relatorio/GerarRelatorio.php" />
+        <option value="$PROJECT_DIR$/app/database/DatabaseInterface.php" />
+        <option value="$PROJECT_DIR$/app/database/DbConnect.php" />
+        <option value="$PROJECT_DIR$/app/database/Database.php" />
+        <option value="$PROJECT_DIR$/app/database/PostgreSQL.php" />
         <option value="$PROJECT_DIR$/app/database/MySQL.php" />
         <option value="$PROJECT_DIR$/app/database/DbConnection.php" />
-        <option value="$PROJECT_DIR$/app/util/relatorio/GerarRelatorio.php" />
+        <option value="$PROJECT_DIR$/app/entities/Reserva.php" />
+        <option value="$PROJECT_DIR$/app/entities/Relatorio.php" />
+        <option value="$PROJECT_DIR$/app/entities/Acento.php" />
+        <option value="$PROJECT_DIR$/app/entities/Atracao.php" />
+        <option value="$PROJECT_DIR$/register.html" />
+        <option value="$PROJECT_DIR$/app/database/DbFactory.php" />
+        <option value="$PROJECT_DIR$/app/dao/ORM.php" />
         <option value="$PROJECT_DIR$/app/entities/Usuario.php" />
+        <option value="$PROJECT_DIR$/app/controller/UsuarioControl.php" />
+        <option value="$PROJECT_DIR$/app/interface/DaoInterface.php" />
+        <option value="$PROJECT_DIR$/app/dao/UsuarioDao.php" />
         <option value="$PROJECT_DIR$/app/api/api.php" />
       </list>
     </option>
@@ -135,78 +168,74 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="project-dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="project-dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="project-dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="project-dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="project-dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="interface" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="project-dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="acoes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="project-dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
               <item name="relatorio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dp-bookingSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dp-bookingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../php/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -215,21 +244,22 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.2363996" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\tools\xampp\htdocs\ADS\project-dp-bookingSystem" />
       <recent name="C:\tools\xampp\htdocs\ADS\dp-bookingSystem\app\util" />
       <recent name="C:\tools\xampp\htdocs\ADS\dp-bookingSystem\app\interface" />
       <recent name="C:\tools\xampp\htdocs\ADS\dp-bookingSystem" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\tools\xampp\htdocs\ADS\project-dp-bookingSystem\app\interface" />
       <recent name="C:\tools\xampp\htdocs\ADS\dp-bookingSystem\app\util\relatorio" />
       <recent name="C:\tools\xampp\htdocs\ADS\dp-bookingSystem\app\util\acoes" />
       <recent name="C:\tools\xampp\htdocs\ADS\dp-bookingSystem\app\util" />
       <recent name="C:\tools\xampp\htdocs\ADS\dp-bookingSystem\app\util\reports" />
-      <recent name="C:\tools\xampp\htdocs\ADS\dp-bookingSystem\app\util\Reports" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -271,17 +301,20 @@
       <workItem from="1552343421990" duration="903000" />
       <workItem from="1552360307992" duration="4316000" />
       <workItem from="1552389044305" duration="1244000" />
+      <workItem from="1552867836911" duration="7955000" />
+      <workItem from="1552992419641" duration="1426000" />
+      <workItem from="1553801615926" duration="11287000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58670000" />
+    <option name="totallyTimeSpent" value="79338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1762481" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18305598" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -297,12 +330,15 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,20 +372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/UsuarioControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/action/UsuarioAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helper/config.inc.php" />
     <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/mysqli/mysqli.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -358,7 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/PostgreSQL.php" />
     <entry file="file://$PROJECT_DIR$/app/interface/AtracaoInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -383,13 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/action/AtracaoAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/util/Reports/ReportFactory.php" />
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -405,40 +419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/entities/Atracao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <folding>
-            <element signature="e#235#396#0#PHP" />
-            <element signature="e#688#720#0#PHP" />
-            <element signature="e#792#827#0#PHP" />
-            <element signature="e#907#939#0#PHP" />
-            <element signature="e#1015#1052#0#PHP" />
-            <element signature="e#1140#1172#0#PHP" />
-            <element signature="e#1260#1303#0#PHP" />
-            <element signature="e#1415#1447#0#PHP" />
-            <element signature="e#1541#1587#0#PHP" />
-            <element signature="e#1711#1743#0#PHP" />
-            <element signature="e#1837#1883#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/phrase.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="384" column="16" selection-start-line="384" selection-start-column="16" selection-end-line="384" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/entities/Relatorio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-          <folding>
-            <element signature="e#6#31#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -489,16 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/interface/RelatorioInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="37" />
-          <folding>
-            <element signature="e#6#31#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/util/acoes/EnviadorDeSMS.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -523,41 +497,204 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/DbConnect.php" />
+    <entry file="file://$PROJECT_DIR$/app/interface/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/util/relatorio/GerarRelatorio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="188">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
           <folding>
             <element signature="e#6#31#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/entities/Usuario.php">
+    <entry file="file://$PROJECT_DIR$/app/database/PostgreSQL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="397">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="n#getHost#0;n#PostgreSQL#0;n#!!top" />
+            <element signature="n#setHost#0;n#PostgreSQL#0;n#!!top" />
+            <element signature="n#getUser#0;n#PostgreSQL#0;n#!!top" />
+            <element signature="n#setUser#0;n#PostgreSQL#0;n#!!top" />
+            <element signature="n#getPass#0;n#PostgreSQL#0;n#!!top" />
+            <element signature="n#setPass#0;n#PostgreSQL#0;n#!!top" />
+            <element signature="n#getDdbname#0;n#PostgreSQL#0;n#!!top" />
+            <element signature="n#setDdbname#0;n#PostgreSQL#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/MySQL.php">
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/PDO/PDO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/DbConnection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        <state relative-caret-position="420">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/entities/Acento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/entities/Relatorio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="e#6#31#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/entities/Reserva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#6#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/entities/Atracao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+          <folding>
+            <element signature="e#235#396#0#PHP" />
+            <element signature="e#688#720#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/action/AtracaoAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/action/UsuarioAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/DbFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="e#610#652#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/MySQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="n#getHost#0;n#MySQL#0;n#!!top" />
+            <element signature="n#setHost#0;n#MySQL#0;n#!!top" />
+            <element signature="n#getUser#0;n#MySQL#0;n#!!top" />
+            <element signature="n#setUser#0;n#MySQL#0;n#!!top" />
+            <element signature="n#getPass#0;n#MySQL#0;n#!!top" />
+            <element signature="n#setPass#0;n#MySQL#0;n#!!top" />
+            <element signature="n#getDdbname#0;n#MySQL#0;n#!!top" />
+            <element signature="n#setDdbname#0;n#MySQL#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dao/ORM.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/entities/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="e#7#32#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/UsuarioControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/interface/RelatorioInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <element signature="e#6#31#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/interface/DaoInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dao/UsuarioDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding>
+            <element signature="e#6#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <element signature="e#1036#1632#0#PHP" />
+            <element signature="e#1668#2226#0#PHP" />
+            <element signature="e#3398#3641#0#PHP" />
+            <element signature="e#3647#4119#0#PHP" />
+            <element signature="e#4125#4637#0#PHP" />
+            <element signature="e#4643#5090#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,35 +1,59 @@
 <?php
 
-include("../database/DbConnection.php");
-include("../interface/AcoesAoGerarRelatorio.php");
-include("../interface/RelatorioInterface.php");
-include("../util/relatorio/GerarRelatorio.php");
-include("../util/relatorio/RelatorioEmCVS.php");
-include("../util/relatorio/RelatorioEmPDF.php");
-include("../util/acoes/EnviadorDeEmail.php");
-include("../util/acoes/EnviadorDeSMS.php");
-include("../entities/Relatorio.php");
-include("../entities/Atracao.php");
-include("../entities/Usuario.php");
+//    function __autoload ( $class_name ) {
+//        include   "../entities/" . $class_name  .  '.php' ;
+//    }
 
+    include("../database/DbConnection.php");
+    include("../database/DbFactory.php");
+    include("../database/PostgreSQL.php");
+    include("../interface/AcoesAoGerarRelatorio.php");
+    include("../interface/RelatorioInterface.php");
+    include("../interface/DaoInterface.php");
+    include("../controller/UsuarioControl.php");
+    include("../util/relatorio/GerarRelatorio.php");
+    include("../util/relatorio/RelatorioEmCVS.php");
+    include("../util/relatorio/RelatorioEmPDF.php");
+    include("../util/acoes/EnviadorDeEmail.php");
+    include("../util/acoes/EnviadorDeSMS.php");
+    include("../entities/Relatorio.php");
+    include("../entities/Atracao.php");
+    include("../entities/Usuario.php");
+    include("../dao/UsuarioDao.php");
 
-//    $res = array('error' => false);
+    
+    $res = array('error' => false);
 
-    $action = 'usuario';
+    $action = 'dbFactory';
 
     if (isset($_GET['action'])) {
         $action = $_GET['action'];
     }
 
-    if ($action == 'usuario') {
-        $usuario = new Usuario(null, null, null, null);
-        $usuario->setName('rodger');
-        $usuario->setCpf('123');
+    if ($action == 'novoUsuario') {
 
-        var_dump($usuario);
+        $usuario = new Usuario();
+
+//        $nome = $_POST['nome'];
+//        $cpf = $_POST['cpf'];
+//        $email = $_POST['email'];
+
+        $nome = 'rogerio';
+        $cpf = '11234';
+        $email = 'rogeiro@mail.com';
+
+        $usuario->setName($nome);
+        $usuario->setCpf($cpf);
+        $usuario->setEmail($usuario);
+        $usuario->setDataCadastro(date("Y-m-d H:i:s"));
+
+        $usuarioControl = new UsuarioControl($usuario);
+
+        if ($usuarioControl->salvar()) echo "Usuario cadastrado";
+        else echo "Erro ao cadastrar usuario";
     }
 
-    // Strategy (and Template Method) and Command (par AcoesAposGerar)
+    // Strategy (and Template Method) and Command (para AcoesAposGerar)
     if ($action == 'relatorio') {
 
         $atracoes = array(
@@ -46,8 +70,10 @@ include("../entities/Usuario.php");
         $gerarRelatorio->gerarRelatorio($novoRelatorio, new RelatorioEmCVS());
     }
 
-    // Singleton
+    // Singleton (deprecated)
     if ($action == 'database') {
+        session_start();
+
         $instance = DbConnection::getInstance();
         $conn = $instance->getConnection();
 
@@ -55,11 +81,39 @@ include("../entities/Usuario.php");
             die("DbConnection: connection established failed..");
         }
 
+        echo "CONNECTION\n";
         var_dump($conn);
+
+        echo "\n\nSESSION ID: ";
+        var_dump(session_id());
+
+        echo "\n\nCONNECTION ID 1: ";
+        $dbh = $conn;
+        print_r($dbh->query('SELECT CONNECTION_ID()')->fetch(PDO::FETCH_ASSOC));
 
         $conn= $instance->close();
     }
 
+    // Factory and Strategy
+    if  ($action == 'dbFactory') {
+        session_start();
+        $dbFactory = new DbFactory();
+        $dbFactory->setDatabase(new MySQL());
+        $DB = $dbFactory->newConnection();
+//        $DB = $dbFactory->makeConnection('localhost', 'root', '', 'mysql');
+
+        echo "CONNECTION\n";
+        var_dump($DB);
+
+        echo "\n\nSESSION ID: ";
+        var_dump(session_id());
+
+        echo "\n\nCONNECTION ID: ";
+        $dbh = $DB->getConn();
+        print_r($dbh->query('SELECT CONNECTION_ID()')->fetch(PDO::FETCH_ASSOC));
+
+//        $DB->close();
+    }
 
     if ($action == 'read') {
 
@@ -123,4 +177,4 @@ include("../entities/Usuario.php");
 
     header("Content-type: application/json");
 //    echo json_encode($res);
-    die();
+//    die();

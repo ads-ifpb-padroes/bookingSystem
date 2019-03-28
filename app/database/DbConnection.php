@@ -59,12 +59,12 @@ class DbConnection {
 
     public function getPDOConnection() {
         //get db config
-        $this->_config = MySQL::getInstance()->getConfig();
+//        $this->_config = MySQL::getInstance()->getConfig();
 
-        $this->DBhost = $this->_config["host"];
-        $this->DBuser = $this->_config["username"];
-        $this->DBpass = $this->_config["password"];
-        $this->DBname = $this->_config["dbname"];
+        $this->DBhost = 'localhost';//$this->_config["host"];
+        $this->DBuser = 'root';//$this->_config["username"];
+        $this->DBpass = '';//$this->_config["password"];
+        $this->DBname = 'dp_bookingSystem';$this->_config["dbname"];
 
         // Check if the connection is already established
         try{

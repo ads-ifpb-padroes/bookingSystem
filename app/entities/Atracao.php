@@ -9,6 +9,7 @@
 class Atracao {
     private $id;
     private $name;
+    private $local;
     private $dataEvento;
     private $valorIngresso;
     private $duracaoEvento;
@@ -21,9 +22,10 @@ class Atracao {
      * @param $valorIngresso
      * @param $duracaoEvento
      */
-    public function __construct($id, $name, $dataEvento, $valorIngresso, $duracaoEvento) {
+    public function __construct($id, $name, $local, $dataEvento, $valorIngresso, $duracaoEvento) {
         $this->id = $id;
         $this->name = $name;
+        $this->local = $local;
         $this->dataEvento = $dataEvento;
         $this->valorIngresso = $valorIngresso;
         $this->duracaoEvento = $duracaoEvento;
@@ -55,6 +57,20 @@ class Atracao {
      */
     public function setName($name): void {
         $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocal() {
+        return $this->local;
+    }
+
+    /**
+     * @param mixed $local
+     */
+    public function setLocal($local): void {
+        $this->local = $local;
     }
 
     /**

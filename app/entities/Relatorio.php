@@ -6,18 +6,18 @@
 class Relatorio {
     private $id;
     private $atracoes;
-    private $percentageReservas;
+    private $usuario;
 
     /**
      * Relatorio constructor.
      * @param $id
      * @param $atracoes
-     * @param $percentageReservas
+     * @param $usuario
      */
-    public function __construct($id, $atracoes, $percentageReservas) {
+    public function __construct($id, $atracoes, $usuario) {
         $this->id = $id;
         $this->atracoes = $atracoes;
-        $this->percentageReservas = $percentageReservas;
+        $this->usuario = $usuario;
     }
 
     /**
@@ -51,17 +51,15 @@ class Relatorio {
     /**
      * @return mixed
      */
-    public function getPercentageReservas() {
-        return $this->percentageReservas;
+    public function getUsuario() {
+        return $this->usuario;
     }
 
     /**
-     * @param mixed $percentageReservas
+     * @param mixed $usuario
      */
-    public function setPercentageReservas($percentageReservas): void {
-        $this->percentageReservas = $percentageReservas;
+    public function setUsuario($usuario): void {
+        $this->usuario = $usuario;
     }
-
-
 
 }

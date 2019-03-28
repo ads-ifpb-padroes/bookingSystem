@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css\style.css">
+        <link rel="stylesheet" href="metroui\css\metro-icons.css">
+        <link rel="stylesheet" href="metroui\css\metro.min.css">
+        <title>bookingSystem</title>
+    </head>
+
+    <body>
+    <br>
+    <br>
+    <div id="root">
+        <div class="container">
+            <p class="errorMessage" v-if="errorMessage">
+                {{errorMessage}}
+            </p>
+
+            <p class="successMessage" v-if="successMessage">
+                {{successMessage}}
+            </p>
+
+            <h1 class="fleft">Cadastrar novo usuário</h1>
+            <div class="clear border-bottom"></div>
+            <hr>
+            <p class="errorMessage" v-if="errorMessage">
+                {{errorMessage}}
+            </p>
+
+            <p class="successMessage" v-if="successMessage">
+                {{successMessage}}
+            </p>
+
+            <div class="modalContent">
+                <div class="dialog-content">
+                    <div id="dvForm" class="grid">
+                        <div class="row margin-top">
+                            <div class="cell-5">
+                                <div class="form-group">
+                                    <label>Nome do usuário</label>
+                                    <input type="text" placeholder="Nome" v-model="newUser.username">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row margin-top">
+                            <div class="cell-5">
+                                <div class="form-group">
+                                    <label>CPF</label>
+                                    <input type="text" placeholder="CPF" v-model="newUser.email">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row margin-top">
+                            <div class="cell-5">
+                                <div class="form-group">
+                                    <label>E-mail</label>
+                                    <input type="email" placeholder="E-mail" v-model="newUser.local"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="delete button success outline" @click="showingDeleteModal = false; saveUser()">Salvar</button>
+                <button class="delete button info outline" @click="showingAddModal = false;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="metroui/js/metro.min.js" charset="utf-8"></script>
+
+    <script src="js/vue.js" charset="utf-8"></script>
+    <script src="js/axios.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    </body>
+</html>

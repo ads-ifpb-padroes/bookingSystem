@@ -9,20 +9,7 @@ class Usuario {
     private $name;
     private $cpf;
     private $email;
-
-    /**
-     * Usuario constructor.
-     * @param $id
-     * @param $name
-     * @param $cpf
-     * @param $email
-     */
-    public function __construct($id, $name, $cpf, $email) {
-        $this->id = $id;
-        $this->name = $name;
-        $this->cpf = $cpf;
-        $this->email = $email;
-    }
+    private $dataCadastro;
 
     /**
      * @return mixed
@@ -80,6 +67,20 @@ class Usuario {
         $this->email = $email;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getDataCadastro()
+    {
+        return $this->dataCadastro;
+    }
 
+    /**
+     * @param mixed $dataCadastro
+     */
+    public function setDataCadastro($dataCadastro): void
+    {
+        $this->dataCadastro = $dataCadastro;
+    }
 
 }
