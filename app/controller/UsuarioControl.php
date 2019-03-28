@@ -19,18 +19,24 @@ class UsuarioControl {
     public function __construct(Usuario $usuario) {
         $this->nome = $usuario->getName();
         $this->cpf = $usuario->getCpf();
-        $this->email = $usuario->getCpf();
+        $this->email = $usuario->getEmail();
         $this->dataCadastro =$usuario->getDataCadastro();
     }
 
+    public function salvar($databaseType) {
 
-    public function salvar() {
+        $dao = new UsuarioDao($databaseType);
 
-        $dao = new UsuarioDao(new MySQL());
+        $result = $dao->salvarUsuario(
+            $this->nome,
+            $this->cpf,
+            $this->email,
+            $this->dataCadastro
+        );
 
-        $dao->salvarUsuario($this->nome, $this->cpf, $this->email, $this->dataCadastro);
-
-        return true;
+        if ($result)
+            return true;
+        return false;
     }
 
 }

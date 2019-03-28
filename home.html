@@ -18,6 +18,9 @@
             <button class="fright addNew lfloat button primary outline" @click="showingAddModal = true;">
                 <span class="mif-plus"></span> Add nova atração
             </button>
+            <!--<button class="fright addNew lfloat bottom button outline" @click="showingAddModal = true;">-->
+                <!--<span class="icon mif-rocket"></span> Gerar relatorio-->
+            <!--</button>-->
             <div class="clear border-bottom"></div>
             <hr>
             <p class="errorMessage" v-if="errorMessage">
@@ -34,6 +37,7 @@
                         <th>#</th>
                         <th>Nome</th>
                         <th>Data</th>
+                        <th>Local</th>
                         <th>Preço</th>
                         <th>Duração</th>
                         <th>Ações</th>
@@ -45,6 +49,7 @@
                     <td>{{user.id}}</td>
                     <td>{{user.nome}}</td>
                     <td>{{user.data}}</td>
+                    <td>{{user.local}}</td>
                     <td>{{user.valor}}</td>
                     <td>{{user.duracao}}</td>
                     <td>
@@ -93,8 +98,17 @@
                             <div class="row margin-top">
                                 <div class="cell-12">
                                     <div class="form-group">
+                                        <label>Duração (min)</label>
+                                        <input type="number" placeholder="Duração" v-model="newUser.duracao">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row margin-top">
+                                <div class="cell-12">
+                                    <div class="form-group">
                                         <label>Valor</label>
-                                        <input type="number" placeholder="Valor" v-model="newUser.local"></span>
+                                        <input type="number" placeholder="R$" v-model="newUser.local"></span>
                                     </div>
                                 </div>
                             </div>

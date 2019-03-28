@@ -31,9 +31,9 @@ class UsuarioDao implements DaoUsuarioInterface {
         $connection = $this->DB->getConn();
 
         $sth = $connection->prepare($this->novoUsuarioSQL);
-        $sth->bindParam(':nome', $nome);
-        $sth->bindParam(':cpf', $cpf);
-        $sth->bindParam(':email', $email);
+        $sth->bindParam(':nome', $nome, PDO::PARAM_STR);
+        $sth->bindParam(':cpf', $cpf, PDO::PARAM_STR);
+        $sth->bindParam(':email', $email, PDO::PARAM_STR);
         $sth->bindParam(':datacadastro', $dataCadastro);
         $result = $sth->execute();
 
@@ -44,11 +44,11 @@ class UsuarioDao implements DaoUsuarioInterface {
         // TODO: Implement atualizarUsuario() method.
     }
 
-    public function removerUsuario($email) {
+    public function removerUsuario($id) {
         // TODO: Implement removerUsuario() method.
     }
 
-    public function buscarUsuario($email) {
+    public function buscarUsuario($id) {
         // TODO: Implement buscarUsuario() method.
     }
 }

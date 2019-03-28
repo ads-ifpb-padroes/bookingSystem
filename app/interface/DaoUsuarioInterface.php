@@ -8,8 +8,8 @@ interface DaoUsuarioInterface {
 
     function atualizarUsuario($nome, $cpf, $email, $dataCadastro);
 
-    function removerUsuario($email);
+    function removerUsuario($id);
 
-    function buscarUsuario($email);
+    function buscarUsuario($id);
 
 }

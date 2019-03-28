@@ -7,50 +7,100 @@
     include("../database/DbConnection.php");
     include("../database/DbFactory.php");
     include("../database/PostgreSQL.php");
+
     include("../interface/AcoesAoGerarRelatorio.php");
     include("../interface/RelatorioInterface.php");
-    include("../interface/DaoInterface.php");
+    include("../interface/DaoUsuarioInterface.php");
+    include("../interface/DaoAtracaoInterface.php");
+
     include("../controller/UsuarioControl.php");
+    include("../controller/AtracaoControl.php");
+
     include("../util/relatorio/GerarRelatorio.php");
     include("../util/relatorio/RelatorioEmCVS.php");
     include("../util/relatorio/RelatorioEmPDF.php");
+
     include("../util/acoes/EnviadorDeEmail.php");
     include("../util/acoes/EnviadorDeSMS.php");
+
     include("../entities/Relatorio.php");
     include("../entities/Atracao.php");
     include("../entities/Usuario.php");
-    include("../dao/UsuarioDao.php");
 
-    
+    include("../dao/UsuarioDao.php");
+    include("../dao/AtracaoDao.php");
+
+
+
     $res = array('error' => false);
 
-    $action = 'dbFactory';
+    $action = 'listar_atracao';
 
     if (isset($_GET['action'])) {
         $action = $_GET['action'];
     }
 
-    if ($action == 'novoUsuario') {
+    if ($action == 'salvar_usuario') {
+
+        // definir banco utilizado
+        $MySQL_Db = new MySQL();
 
         $usuario = new Usuario();
 
-//        $nome = $_POST['nome'];
-//        $cpf = $_POST['cpf'];
-//        $email = $_POST['email'];
-
-        $nome = 'rogerio';
-        $cpf = '11234';
-        $email = 'rogeiro@mail.com';
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
+        $email = $_POST['email'];
 
         $usuario->setName($nome);
         $usuario->setCpf($cpf);
-        $usuario->setEmail($usuario);
+        $usuario->setEmail($email);
         $usuario->setDataCadastro(date("Y-m-d H:i:s"));
 
         $usuarioControl = new UsuarioControl($usuario);
 
-        if ($usuarioControl->salvar()) echo "Usuario cadastrado";
-        else echo "Erro ao cadastrar usuario";
+        if ($usuarioControl->salvar($MySQL_Db)) echo "Usuario cadastrado";
+        else echo "Erro ao cadastrar usuario, EMAIL ou CPF existente";
+    }
+
+    if ($action == 'salvar_atracao') {
+        // defino o banco
+        $MySQL_Db = new MySQL();
+
+        $atracao = new Atracao();
+
+//        $nome = $_POST['nome'];
+//        $preco = $_POST['preco'];
+//        $local = $_POST['local'];
+//        $duracao = $_POST['duracao'];
+//        $dataEvento = $_POST['dataEvento'];
+
+        $nome = 'Rock in Rio';
+        $local = 'Praça do Rock Cajazeiras';
+        $preco = 40.99;
+        $duracao = 120;
+        $dataEvento = date("Y-m-d H:i:s");
+
+        $atracao->setNome($nome);
+        $atracao->setLocal($local);
+        $atracao->setValorIngresso($preco);
+        $atracao->setDuracaoEvento($duracao);
+        $atracao->setDataEvento($dataEvento);
+
+        $atracaoControl = new AtracaoControl($atracao);
+
+        if ($atracaoControl->salvar($MySQL_Db)) echo "Atração cadastrada";
+        else echo "Erro ao cadastrar";
+    }
+
+    if ($action == 'listar_atracoes') {
+        // defino o banco
+        $MySQL_Db = new MySQL();
+
+        $atracao = new Atracao();
+
+        $atracaoControl = new AtracaoControl($atracao);
+
+        $atracaoControl->listar($MySQL_Db);
     }
 
     // Strategy (and Template Method) and Command (para AcoesAposGerar)

@@ -5,6 +5,7 @@
  */
 
 class Usuario {
+
     private $id;
     private $name;
     private $cpf;

@@ -18,9 +18,7 @@ class DbFactory {
 //        elseif ($this->driver === 'postgre') {
 //            $DataBase = new PostgreSQL();
 //        }
-
 //        $DataBase->connect();
-
         return $this->database;
     }
 

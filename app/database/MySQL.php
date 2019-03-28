@@ -16,7 +16,7 @@ class MySQL implements Database{
     public function __construct() { }
 
     /**
-     * @return null
+     * @return connection se obter conexão com banco, caso contrário null
      */
     public function getConn() {
         return $this->conn;
