@@ -33,6 +33,13 @@ echo "<span class='glyphicon glyphicon glyphicon-tasks'></span> Gerar Relatório
 echo "</a>";
 echo "</div>";
 
+// criar relatório button
+// echo "<div class='right-button-margin'>";
+// echo "<a href='reserve.php?id=' class='btn btn-info delete-object'>";
+// echo "<span class='glyphicon glyphicon-edit'></span>Ordenar Atrações";
+// echo "</a>";
+// echo "</div>";
+
 // select all users
 $prep_state = $atracao->getTodasAtracoes($from_record_num, $records_per_page); //Name of the PHP variable to bind to the SQL statement parameter.
 $num = $prep_state->rowCount();
@@ -44,8 +51,15 @@ if($num>=0){
     echo "<tr>";
     echo "<th>Nome</th>";
     echo "<th>Localização</th>";
-    echo "<th>Data</th>";
-    echo "<th>Ingresso</th>";
+    
+    echo "<th><a href='ordenar.php?type=data'>";
+    echo "Data";
+    echo "</a></th>";
+
+    echo "<th><a href='ordenar.php?type=valor'>";
+    echo "Ingresso";
+    echo "</a></th>";
+
     echo "<th>Duração</th>";
     echo "<th>Ações</th>";
     echo "</tr>";
@@ -95,9 +109,9 @@ if($num>=0){
     include_once 'pagination.php';
 }
 
-// if there are no user
+// if there are no Atração
 else{
-    echo "<div> No User found. </div>";
+    echo "<div> Não a nenhuma Atração cadastrada.</div>";
     }
 ?>
 

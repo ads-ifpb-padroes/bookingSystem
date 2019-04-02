@@ -13,17 +13,49 @@ class Atracao
     public $dataEvento;
     public $valorIngresso;
     public $duracaoEvento;
+    public $assentoQuantidade;
 
     public function __construct($db)
     {
         $this->db_conn = $db;
     }
 
+    public function getId() {
+        return $this->id;
+    }
+
+    public function setId($id): void {
+        $this->id = $id;
+    }
+
+    public function getNome() {
+        return $this->nome;
+    }
+
+    public function setNome($nome): void {
+        $this->id = $nome;
+    }
+
+    public function getLocalizacao() {
+        return $this->localizacao;
+    }
+
+    public function setEmail($Email): void {
+        $this->id = $Email;
+    }
+
+    public function getCpf() {
+        return $this->cpf;
+    }
+
+    public function setCpf($id): void {
+        $this->id = $cpf;
+    }
 
     function create()
     {
         //write query
-        $sql = "INSERT INTO " . $this->table_name . " SET nome = ?, localizacao = ?, dataEvento = ?, valorIngresso = ?, duracaoEvento = ?";
+        $sql = "INSERT INTO " . $this->table_name . " SET nome = ?, localizacao = ?, dataEvento = ?, valorIngresso = ?, duracaoEvento = ?, assentoQuantidade = ?";
 
         $prep_state = $this->db_conn->prepare($sql);
 
@@ -32,6 +64,7 @@ class Atracao
         $prep_state->bindParam(3, $this->dataEvento);
         $prep_state->bindParam(4, $this->valorIngresso);
         $prep_state->bindParam(5, $this->duracaoEvento);
+        $prep_state->bindParam(6, $this->assentoQuantidade);
 
         if ($prep_state->execute()) {
             return true;
@@ -56,7 +89,7 @@ class Atracao
 
     function update()
     {
-        $sql = "UPDATE " . $this->table_name . " SET nome = :nome, localizacao = :localizacao, dataEvento = :dataEvento, valorIngresso = :valorIngresso, duracaoEvento  = :duracaoEvento  WHERE id = :id";
+        $sql = "UPDATE " . $this->table_name . " SET nome = :nome, localizacao = :localizacao, dataEvento = :dataEvento, valorIngresso = :valorIngresso, duracaoEvento  = :duracaoEvento, assentoQuantidade = :assentoQuantidade  WHERE id = :id";
         // prepare query
         $prep_state = $this->db_conn->prepare($sql);
 
@@ -66,6 +99,7 @@ class Atracao
         $prep_state->bindParam(':dataEvento', $this->dataEvento);
         $prep_state->bindParam(':valorIngresso', $this->valorIngresso);
         $prep_state->bindParam(':duracaoEvento', $this->duracaoEvento);
+        $prep_state->bindParam(':assentoQuantidade', $this->assentoQuantidade);
         $prep_state->bindParam(':id', $this->id);
 
         // execute the query
@@ -94,7 +128,7 @@ class Atracao
 
     function getTodasAtracoes($from_record_num, $records_per_page)
     {
-        $sql = "SELECT id, nome, localizacao, dataEvento, valorIngresso, duracaoEvento FROM " . $this->table_name . " ORDER BY id ASC LIMIT ?, ?";
+        $sql = "SELECT id, nome, localizacao, dataEvento, valorIngresso, duracaoEvento, assentoQuantidade FROM " . $this->table_name . " ORDER BY id ASC LIMIT ?, ?";
 
 
         $prep_state = $this->db_conn->prepare($sql);
@@ -113,7 +147,7 @@ class Atracao
     // for edit Atracao form when filling up
     function getAtracao()
     {
-        $sql = "SELECT nome, localizacao, dataEvento, valorIngresso, duracaoEvento FROM " . $this->table_name . " WHERE id = :id";
+        $sql = "SELECT nome, localizacao, dataEvento, valorIngresso, duracaoEvento, assentoQuantidade FROM " . $this->table_name . " WHERE id = :id";
 
         $prep_state = $this->db_conn->prepare($sql);
         $prep_state->bindParam(':id', $this->id);
@@ -126,6 +160,7 @@ class Atracao
         $this->dataEvento = $row['dataEvento'];
         $this->valorIngresso = $row['valorIngresso'];
         $this->duracaoEvento = $row['duracaoEvento'];
+        $this->assentoQuantidade = $row['assentoQuantidade'];
     }
 
 

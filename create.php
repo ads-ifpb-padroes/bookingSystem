@@ -29,6 +29,7 @@ if ($_POST){
     $atracao->dataEvento = htmlentities(trim($_POST['dataEvento']));
     $atracao->valorIngresso = htmlentities(trim($_POST['valorIngresso']));
     $atracao->duracaoEvento = $_POST['duracaoEvento'];
+    $atracao->assentoQuantidade = $_POST['assentoQuantidade'];
 
     // if the Atração able to create
     if($atracao->create()){
@@ -80,6 +81,12 @@ if ($_POST){
         <tr>
             <td>Duração (min)</td>
             <td><input type='number' name='duracaoEvento' class='form-control' placeholder="Qual a duração em minutos?" required></td>
+        </tr>
+
+        <tr>
+            <td>Quantidade de Assentos (max 99)</td>
+            <td><input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type='number' name='assentoQuantidade' pattern="\d*" maxlength="2" class='form-control' placeholder="Digita ai a quantidade de assetos!" required></td>
         </tr>
 
         <!-- <tr>

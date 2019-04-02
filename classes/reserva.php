@@ -7,7 +7,7 @@ class Reserva
     public $table_name = "reserva";
 
     // object properties
-    public $id;
+    private $id;
     private $nome;
     private $email;
     private $cpf;
@@ -15,6 +15,46 @@ class Reserva
     public function __construct($db)
     {
         $this->db_conn = $db;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    public function getNome()
+    {
+        return $this->nome;
+    }
+
+    public function setNome($nome): void
+    {
+        $this->nome = $nome;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email): void
+    {
+        $this->email = $email;
+    }
+
+    public function getCpf()
+    {
+        return $this->cpf;
+    }
+
+    public function setCpf($cpf): void
+    {
+        $this->cpf = $cpf;
     }
 
     function create()

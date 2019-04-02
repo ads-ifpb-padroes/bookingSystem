@@ -16,6 +16,7 @@ error_reporting(E_ALL); // report all php errors
         <!-- Bootstrap CSS -->
         <link href="library/css/bootstrap.css" rel="stylesheet" media="screen" />
         <link href="library/css/bootstrap.min.css" rel="stylesheet">
+        <link href="library/css/seats.css" rel="stylesheet">
         <script src="library/js/bootstrap.min.js"></script>
 
         <!-- some custom CSS -->

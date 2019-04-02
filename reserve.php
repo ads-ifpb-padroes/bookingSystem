@@ -24,27 +24,29 @@ $atracao = new Atracao($db);
 // instantiate Reserva object
 $reserva = new Reserva($db);
 $atracao->id = $id;
-$atracao->getUser();
+$atracao->getAtracao();
 
 // check if the form is submitted
 if($_POST)
 {
 
     // set user property values
-    $atracao->nome = htmlentities(trim($_POST['nome']));
-    $atracao->localizacao = htmlentities(trim($_POST['localizacao']));
-    $atracao->dataEvento = htmlentities(trim($_POST['dataEvento']));
-    $atracao->valorIngresso = htmlentities(trim($_POST['valorIngresso']));
-    $atracao->duracaoEvento = $_POST['duracaoEvento'];
-    $reserva->nome = $_POST['nome'];
+    // $atracao->nome = htmlentities(trim($_POST['nome']));
+    // $atracao->localizacao = htmlentities(trim($_POST['localizacao']));
+    // $atracao->dataEvento = htmlentities(trim($_POST['dataEvento']));
+    // $atracao->valorIngresso = htmlentities(trim($_POST['valorIngresso']));
+    // $atracao->duracaoEvento = $_POST['duracaoEvento'];
+    $reserva->setNome($_POST['nome']);
+    $reserva->setEmail($_POST['email']);
+    $reserva->setCpf($_POST['cpf']);
 
     // Edit user
-    if($atracao->update()){
+    if($reserva->create()){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
                         &times;
                   </button>";
-            echo "Success! Seu assento foi reservado. Enviamos um email com mais informações.";
+            echo "Success! Seu assento foi reservado."; //Enviamos um email com mais informações.";
         echo "</div>";
     }
 
@@ -78,6 +80,7 @@ if($_POST)
         </tr>
         <tr>
             <td>Valor do Ingresso</td>
+            
             <td><input type='number' name='valorIngresso' value='<?php echo $atracao->valorIngresso;?>' class='form-control' placeholder="Enter Mobile Number" disabled></td>
         </tr>
         <tr>
@@ -88,7 +91,7 @@ if($_POST)
     <form action='reserve.php?id=<?php echo $id; ?>' method='post'>
         <tr>
             <td>Nome Completo</td>
-            <td><input type='text' name='name' class='form-control' placeholder="Seu nome" Required></td>
+            <td><input type='text' name='nome' class='form-control' placeholder="Seu nome" Required></td>
         </tr>
 
         <tr>
@@ -102,49 +105,54 @@ if($_POST)
         </tr>
 
         <tr>
-            <td>CPF</td>
+            <td>Assentos</td>
+            <td>
+            
+                <?php
+                $quantidade = $atracao->assentoQuantidade;
+
+                echo '<select class="form-control" id="exampleFormControlSelect1">';
+                echo "<option>--- Selecione o Assento ---</option>";
+                for ($x = 1; $x <= $quantidade; $x++) {
+                    echo '    <option value="'. $x .'">'.$x.'</option>';
+                }    
+                echo '</select>';
+                
+                // read the user categories from the database
+                // include_once 'classes/category.php';
+
+                // $category = new Category($db);
+                // $prep_state = $category->getAll();
+
+                // // put them in a select drop-down
+                // echo "<select class='form-control' name='category_id'>";
+                // echo "<option>--- Select Category ---</option>";
+
+                // while ($row_category = $prep_state->fetch(PDO::FETCH_ASSOC)){
+                //     extract($row_category);
+
+                //     // current category of the person must be selected
+                // 	if($person->category_id == $id){ //if user category_id is equal to category id,
+                //         echo "<option value='$id' selected>"; //Specifies that an option should be pre-selected when the page loads
+                //     }else{
+                //         echo "<option value='$id'>";
+                //     }
+
+                // 	echo "$name </option>";
+                // }
+                // echo "</select>";
+                ?>
+            
         </tr>
 
-            <tr>
-                <td>Category</td>
-                <td>
-
-                    <?php
-                    // read the user categories from the database
-                    // include_once 'classes/category.php';
-
-                    // $category = new Category($db);
-                    // $prep_state = $category->getAll();
-
-                    // // put them in a select drop-down
-                    // echo "<select class='form-control' name='category_id'>";
-                    // echo "<option>--- Select Category ---</option>";
-
-                    // while ($row_category = $prep_state->fetch(PDO::FETCH_ASSOC)){
-                    //     extract($row_category);
-
-                    //     // current category of the person must be selected
-					// 	if($person->category_id == $id){ //if user category_id is equal to category id,
-                    //         echo "<option value='$id' selected>"; //Specifies that an option should be pre-selected when the page loads
-                    //     }else{
-                    //         echo "<option value='$id'>";
-                    //     }
-
-					// 	echo "$name </option>";
-                    // }
-                    // echo "</select>";
-                    ?>
-                </td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td>
-                    <button type="submit" class="btn btn-success" >
-                        <span class=""></span> Update
-                    </button>
-                </td>
-            </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" class="btn btn-info" >
+                    <span class=""></span> Reservar
+                </button>
+            </td>
+        </tr>
 
         </table>
     </form>
