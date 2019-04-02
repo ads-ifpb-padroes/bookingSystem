@@ -3,17 +3,17 @@
 $page_title = "Editando Atração";
 include_once "header.php";
 
-// read user button
+// read Atração button
 echo "<div class='right-button-margin'>";
     echo "<a href='index.php' class='btn btn-info pull-right'>";
-        echo "<span class='glyphicon glyphicon-list-alt'></span> Read Atrações ";
+        echo "<span class='glyphicon glyphicon-list-alt'></span> Ver Atrações ";
     echo "</a>";
 echo "</div>";
 
 // isset() is a PHP function used to verify if ID is there or not
 $id = isset($_GET['id']) ? $_GET['id'] : die('ERROR! ID not found!');
 
-// include database and object user file
+// include database and object Atração file
 include_once 'classes/database.php';
 include_once 'classes/atracao.php';
 include_once 'initial.php';

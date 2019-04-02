@@ -39,7 +39,7 @@ if($_POST)
     $reserva->setNome($_POST['nome']);
     $reserva->setEmail($_POST['email']);
     $reserva->setCpf($_POST['cpf']);
-    $reserva->setCpf($_POST['assento']);
+    $reserva->setAssento($_POST['assento']);
     $reserva->setAtracao($id);
 
     // Edit user
@@ -112,37 +112,30 @@ if($_POST)
             
                 <?php
                 $quantidade = $atracao->assentoQuantidade;
+                
+                $sql = "SELECT assento_id FROM reserva WHERE atracao_id = :id";
 
-                echo '<select class="form-control" id="exampleFormControlSelect1">';
-                echo "<option>--- Selecione o Assento ---</option>";
+                $prep_state = $db->prepare($sql);
+                $prep_state->bindParam(':id', $id);
+                $prep_state->execute();
+
+                $row = $prep_state->fetchAll();
+               
+                echo '<select name="assento" class="form-control" id="exampleFormControlSelect1">';
+                echo '<option>--- Selecione o Assento ---</option>';
                 for ($x = 1; $x <= $quantidade; $x++) {
-                    echo '    <option name="assento" value="'. $x .'">'.$x.'</option>';
+                    $disable = "";
+                    for($a = 0; $a < sizeof($row); $a++) {
+                        if($row[$a]['assento_id'] == $x) $disable = "disabled";
+                    }
+
+                    echo '<option value="'. $x .'" '. $disable .'>'.$x.'</option>';
+
+                    $disable = "";
                 }    
                 echo '</select>';
                 
-                // read the user categories from the database
-                // include_once 'classes/category.php';
-
-                // $category = new Category($db);
-                // $prep_state = $category->getAll();
-
-                // // put them in a select drop-down
-                // echo "<select class='form-control' name='category_id'>";
-                // echo "<option>--- Select Category ---</option>";
-
-                // while ($row_category = $prep_state->fetch(PDO::FETCH_ASSOC)){
-                //     extract($row_category);
-
-                //     // current category of the person must be selected
-                // 	if($person->category_id == $id){ //if user category_id is equal to category id,
-                //         echo "<option value='$id' selected>"; //Specifies that an option should be pre-selected when the page loads
-                //     }else{
-                //         echo "<option value='$id'>";
-                //     }
-
-                // 	echo "$name </option>";
-                // }
-                // echo "</select>";
+               
                 ?>
             
         </tr>
