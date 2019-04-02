@@ -12,6 +12,7 @@ class OrdenarPorValor extends OrdenarAtracao
     public function checar(OrdenarStatus $status)
     {
         if (!$status->porValor) {
+            echo "Atrções listadas por valor do ingresso <br/>";
             return $this->getTodasPorValor();
         }
         $this->proximo($status);

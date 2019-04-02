@@ -35,7 +35,7 @@ echo "</div>";
 
 // read Reserva button
 echo "<div class='right-button-margin'>";
-    echo "<a href='index.php' class='btn btn-info pull-right'>";
+    echo "<a href='reservas.php' class='btn btn-info pull-right'>";
         echo "<span class='glyphicon glyphicon-list-alt'></span> Reservas ";
     echo "</a>";
 echo "</div>";
@@ -56,6 +56,7 @@ if($num>=0){
 
     echo "<table class='table table-hover table-responsive table-bordered'>";
     echo "<tr>";
+    echo "<th>#</th>";
     echo "<th>Nome</th>";
     echo "<th>Localização</th>";
     
@@ -78,6 +79,7 @@ if($num>=0){
 
         echo "<tr>";
 
+        echo "<td>$row[id]</td>";
         echo "<td>$row[nome]</td>";
         echo "<td>$row[localizacao]</td>";
         echo "<td>$row[dataEvento]</td>";

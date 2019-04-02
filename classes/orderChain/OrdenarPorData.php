@@ -11,7 +11,8 @@ class OrdenarPorData extends OrdenarAtracao
     }
     public function checar(OrdenarStatus $status)
     {
-        if (!$status->porData) {    
+        if (!$status->porData) {
+            echo "Atrções listadas por data <br/>";
             return $this->getTodasPorData();
         }
         $this->proximo($status);
