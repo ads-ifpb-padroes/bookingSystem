@@ -33,6 +33,13 @@ echo "<span class='glyphicon glyphicon glyphicon-tasks'></span> Gerar Relatório
 echo "</a>";
 echo "</div>";
 
+// read Reserva button
+echo "<div class='right-button-margin'>";
+    echo "<a href='index.php' class='btn btn-info pull-right'>";
+        echo "<span class='glyphicon glyphicon-list-alt'></span> Reservas ";
+    echo "</a>";
+echo "</div>";
+
 // criar relatório button
 // echo "<div class='right-button-margin'>";
 // echo "<a href='reserve.php?id=' class='btn btn-info delete-object'>";

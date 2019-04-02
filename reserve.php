@@ -103,7 +103,7 @@ if($_POST)
 
         <tr>
             <td>CPF</td>
-            <td><input type='txt' pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" name='cpf' class='form-control' placeholder="Só pra confirmarmos tudo, seu CPF" min="14" max="18" Required></td>
+            <td><input type='txt' pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" name='cpf' class='form-control' placeholder="Só pra confirmarmos tudo, seu CPF (###.###.###-##)" min="14" max="18" Required></td>
         </tr>
 
         <tr>

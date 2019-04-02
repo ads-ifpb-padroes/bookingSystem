@@ -4,7 +4,7 @@
 $page_title = "Create Atração";
 include_once "header.php";
 
-// read user button
+// read Atracao button
 echo "<div class='right-button-margin'>";
     echo "<a href='index.php' class='btn btn-info pull-right'>";
         echo "<span class='glyphicon glyphicon-list-alt'></span> Lista de Atrações ";
