@@ -17,12 +17,12 @@ class DatabaseConnection
         $database = $this->configuration->getDatabase();
 
         // return sprintf(
-        //     //            '%s:%s@%s:%d',
-        //     //            $this->configuration->getUsername(),
-        //     //            $this->configuration->getPassword(),
-        //     //            $this->configuration->getHost(),
-        //     //            $this->configuration->getPort()
-        //     //        );
+        //                '%s:%s@%s:%d',
+        //                $this->configuration->getUsername(),
+        //                $this->configuration->getPassword(),
+        //                $this->configuration->getHost(),
+        //                $this->configuration->getPort()
+        //            );
 
         try {
             $dbh = new PDO(
