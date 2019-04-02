@@ -87,40 +87,6 @@ if($_POST)
             <td>Duração (min)</td>
             <td><input type='number' name='duracaoEvento' value='<?php echo $atracao->duracaoEvento;?>' class='form-control' placeholder="Enter Mobile Number" required></td>
         </tr>
-
-            <!-- <tr>
-                <td>Category</td>
-                <td>
-
-                    <?php
-                    // read the Atração categories from the database
-                    // include_once 'classes/category.php';
-
-                    // $category = new Category($db);
-                    // $prep_state = $category->getAll();
-
-                    // // put them in a select drop-down
-                    // echo "<select class='form-control' name='category_id'>";
-                    // echo "<option>--- Select Category ---</option>";
-
-                    // while ($row_category = $prep_state->fetch(PDO::FETCH_ASSOC)){
-                    //     extract($row_category);
-
-                    //     // current category of the person must be selected
-					// 	if($person->category_id == $id){ //if user category_id is equal to category id,
-                    //         echo "<option value='$id' selected>"; //Specifies that an option should be pre-selected when the page loads
-                    //     }else{
-                    //         echo "<option value='$id'>";
-                    //     }
-
-					// 	echo "$name </option>";
-                    // }
-                    // echo "</select>";
-                    ?>
-                </td>
-            </tr> -->
-
-
             <tr>
                 <td></td>
                 <td>
