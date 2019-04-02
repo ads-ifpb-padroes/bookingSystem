@@ -125,7 +125,7 @@ if($_POST)
                 <td></td>
                 <td>
                     <button type="submit" class="btn btn-success" >
-                        <span class=""></span> Update
+                        <span class=""></span> Atualizar
                     </button>
                 </td>
             </tr>

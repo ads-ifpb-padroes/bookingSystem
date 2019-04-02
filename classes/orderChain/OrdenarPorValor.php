@@ -4,10 +4,14 @@ class OrdenarPorValor extends OrdenarAtracao
     public $db_conn = NULL;
     public $table_name = 'atracao';
 
+    public function __construct($db)
+    {
+        $this->db_conn = $db;
+    }
+
     public function checar(OrdenarStatus $status)
     {
         if (!$status->porValor) {
-            echo "lista por valor";
             return $this->getTodasPorValor();
         }
         $this->proximo($status);

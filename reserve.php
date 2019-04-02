@@ -6,7 +6,7 @@ include_once "header.php";
 // read user button
 echo "<div class='right-button-margin'>";
     echo "<a href='index.php' class='btn btn-info pull-right'>";
-        echo "<span class='glyphicon glyphicon-list-alt'></span> Read Atrações ";
+        echo "<span class='glyphicon glyphicon-list-alt'></span> Ver Atrações ";
     echo "</a>";
 echo "</div>";
 
@@ -39,6 +39,8 @@ if($_POST)
     $reserva->setNome($_POST['nome']);
     $reserva->setEmail($_POST['email']);
     $reserva->setCpf($_POST['cpf']);
+    $reserva->setCpf($_POST['assento']);
+    $reserva->setAtracao($id);
 
     // Edit user
     if($reserva->create()){
@@ -114,7 +116,7 @@ if($_POST)
                 echo '<select class="form-control" id="exampleFormControlSelect1">';
                 echo "<option>--- Selecione o Assento ---</option>";
                 for ($x = 1; $x <= $quantidade; $x++) {
-                    echo '    <option value="'. $x .'">'.$x.'</option>';
+                    echo '    <option name="assento" value="'. $x .'">'.$x.'</option>';
                 }    
                 echo '</select>';
                 

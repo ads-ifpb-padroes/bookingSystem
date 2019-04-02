@@ -11,6 +11,8 @@ class Reserva
     private $nome;
     private $email;
     private $cpf;
+    private $assento;
+    private $atracao;
 
     public function __construct($db)
     {
@@ -57,16 +59,38 @@ class Reserva
         $this->cpf = $cpf;
     }
 
+    public function getAssento()
+    {
+        return $this->assento;
+    }
+
+    public function setAssento($assento): void
+    {
+        $this->assento = $assento;
+    }
+
+    public function getAtracaoo()
+    {
+        return $this->atracao;
+    }
+
+    public function setAtracao($atracao): void
+    {
+        $this->atracao = $atracao;
+    }
+
     function create()
     {
         //write query
-        $sql = "INSERT INTO " . $this->table_name . " SET nome = ?, email = ?, cpf = ?";
+        $sql = "INSERT INTO " . $this->table_name . " SET nome = ?, email = ?, cpf = ?, assento_id = ?, atracao_id = ?";
 
         $prep_state = $this->db_conn->prepare($sql);
 
         $prep_state->bindParam(1, $this->nome);
         $prep_state->bindParam(2, $this->email);
         $prep_state->bindParam(3, $this->cpf);
+        $prep_state->bindParam(4, $this->assento);
+        $prep_state->bindParam(5, $this->atracao);
 
         if ($prep_state->execute()) {
             return true;
